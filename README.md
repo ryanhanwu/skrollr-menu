@@ -1,8 +1,12 @@
-skrollr-menu 1.0.3
+# skrollr-menu-amd-latest 1.0.4
+## skrollr-menu 1.0.3
 ==================
 
 skrollr plugin for hash navigation.
 
+```
+bower install skrollr-menu-amd-latest
+```
 
 Documentation
 =============
