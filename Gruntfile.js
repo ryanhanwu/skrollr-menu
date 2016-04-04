@@ -16,6 +16,9 @@ module.exports = function(grunt) {
 				trailing: true,
 				globals: {
 					window: true,
+					define: true,
+					require: true,
+					module: true,
 					document: true,
 					navigator: true
 				}
@@ -24,7 +27,7 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-				banner: '/*! skrollr-menu <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr-menu | Free to use under terms of MIT license */\n'
+				banner: '/*! skrollr-menu <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>) | Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr-menu | AMD Support for 1.0+ - Ryan Wu https://github.com/ryanhanwu/skrollr-menu | Free to use under terms of MIT license */\n'
 			},
 
 			all: {

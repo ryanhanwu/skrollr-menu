@@ -4,9 +4,20 @@
  *
  * Alexander Prinzhorn - https://github.com/Prinzhorn/skrollr
  *
+ * AMD Support for 1.0+ - Ryan Wu https://github.com/ryanhanwu/skrollr-menu
+ *
  * Free to use under terms of MIT license
  */
-(function(document, window) {
+(function (document, window, factory) {
+		'use strict';
+  if(typeof define === 'function' && define.amd) {
+    define(['skrollr'], factory);
+  } else if(typeof module === 'object' && module.exports) {
+    module.exports = (window.skrollr = factory(require('skrollr')));
+  } else {
+    window.skrollr = factory(window.skrollr);
+  }
+}(window, document, function(skrollr) {
 	'use strict';
 
 	var DEFAULT_DURATION = 500;
@@ -18,7 +29,6 @@
 	var MENU_DURATION_ATTR = 'data-menu-duration';
 	var MENU_IGNORE_ATTR = 'data-menu-ignore';
 
-	var skrollr = window.skrollr;
 	var history = window.history;
 	var supportsHistory = !!history.pushState;
 
@@ -252,4 +262,5 @@
 			window.scrollTo(0, 0);
 		}
 	});
-}(document, window));
+	return skrollr.menu;
+}));

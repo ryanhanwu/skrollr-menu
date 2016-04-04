@@ -1,10 +1,10 @@
 {
-  "name": "skrollr-menu",
-  "homepage": "http://prinzhorn.github.io/skrollr-menu/",
+  "name": "skrollr-menu-amd-latest",
+  "homepage": "https://github.com/ryanhanwu/skrollr-menu",
   "authors": [
-    "Alexander Prinzhorn"
+    "Ryan Wu"
   ],
-  "description": "skrollr plugin for hash navigation",
+  "description": "skrollr amd plugin for hash navigation",
   "main": "src/skrollr.menu.js",
   "moduleType": [
     "globals"
